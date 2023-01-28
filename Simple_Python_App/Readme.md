@@ -1,0 +1,1 @@
+In this project, I have created a simple python application in Jenkins pipeline. The pipeline includes three stages: Build, Test and Deliver. These stages are defined in Jenkinsfile. Docker image is used for setting up the python environment. Source folder contains all the python scripts. The application is tested using junit testing and created .exe package using pyinstaller.
