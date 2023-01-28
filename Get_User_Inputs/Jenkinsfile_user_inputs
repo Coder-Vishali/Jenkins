@@ -1,0 +1,18 @@
+script {
+    env.X = input message: 'Enter the value of x',
+                        parameters: [string(defaultValue: '1',
+                                    description: 'Provide your description here',
+                                    name: 'X')] 
+    env.Y = input message: 'Enter the value of y? ',
+                        parameters: [string(defaultValue: '2',
+                                    description: 'Provide your description her',
+                                    name: 'Y')]  
+    env.Z = input(
+        message: 'Enter the value of Z: ',
+        parameters: [
+                [$class: 'ChoiceParameterDefinition',
+                 choices: ['34','12'].join('\n'),
+                 name: 'input',
+                 description: 'Menu - select box option']
+        ])
+    }
