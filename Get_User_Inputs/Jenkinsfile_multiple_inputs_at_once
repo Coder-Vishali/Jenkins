@@ -1,0 +1,10 @@
+script {
+    def userInput = input message: 'Enter the user inputs',
+          parameters: [
+            string(defaultValue: '1', description: 'Provide your description here', name: 'X'),
+            string(defaultValue: '100', description: 'How many images you like to generate?', name: 'Y'),
+            choice(name: 'Z', ['65','45'], description: 'Choose the Z value:'),]
+    env.X = userInput['X']
+    env.Y = userInput['Y']
+    env.Z = userInput['Z']
+}
